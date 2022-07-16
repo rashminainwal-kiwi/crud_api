@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'employee',
+    'rest_framework_swagger',
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
@@ -81,12 +83,12 @@ WSGI_APPLICATION = 'drf.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'djongo',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': os.getenv('NAME'),
-        'HOST': os.getenv('HOST'),
+        'HOST': 'localhost',
         'USER': os.getenv('USER'),
         'PASSWORD': os.getenv('PASSWORD'),
-        'PORT': os.getenv('PORT'),
+
     }
 }
 
